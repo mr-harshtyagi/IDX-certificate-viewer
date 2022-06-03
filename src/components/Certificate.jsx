@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loader from "react-spinners/BeatLoader";
+import QRCode from "react-qr-code";
 
 export default function Certificate() {
   let params = useParams();
@@ -30,7 +31,7 @@ export default function Certificate() {
         </div>
       ) : (
         <>
-          <div style={{ padding: "0 17%", marginTop: "90px" }}>
+          <div style={{ padding: "0 14%", marginTop: "90px" }}>
             <h2 style={{ color: "#446A46" }} className="text-center">
               Your Certificate is here 🎉
             </h2>
@@ -46,8 +47,8 @@ export default function Certificate() {
             >
               <div
                 style={{
-                  height: "450px",
-                  width: "680px",
+                  height: "auto",
+                  width: "56%",
                   margin: "20px",
                   position: "absolute",
                   zIndex: "-1",
@@ -61,7 +62,7 @@ export default function Certificate() {
                     marginTop: "80px",
                     marginLeft: "55px",
                   }}
-                  src="images/logo.png"
+                  src="../images/logo.png"
                   alt="logo"
                 />
               </div>
@@ -72,15 +73,19 @@ export default function Certificate() {
                 }}
               >
                 <p
-                  onClick={()=>{
-                      window.open(`https://react-app-testing.vercel.app/transaction/${data.hash}`, "_blank", "noopener,noreferrer");
+                  onClick={() => {
+                    window.open(
+                      `https://react-app-testing.vercel.app/transaction/${data.hash}`,
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
                   }}
                   style={{
                     padding: "0",
                     float: "right",
                     fontSize: "0.8rem",
                     marginRight: "10px",
-                    cursor:"pointer",
+                    cursor: "pointer",
                     marginTop: "0px",
                     textDecoration: "none",
                     color: "grey",
@@ -101,7 +106,12 @@ export default function Certificate() {
                   <img
                     src="../../images/logo.png"
                     alt="logo"
-                    style={{ height: "80px", margin: "12px",marginTop:"0px", float: "left" }}
+                    style={{
+                      height: "80px",
+                      margin: "12px",
+                      marginTop: "0px",
+                      float: "left",
+                    }}
                   />
                   <h1 style={{ paddingTop: "10px" }}>BITS PILANI GOA</h1>
                   <h6> Pilani | Goa | Hyderabad | Dubai</h6>
@@ -172,24 +182,25 @@ export default function Certificate() {
                     <h5>{data.time_stamp}</h5>
                   </div>
                   <div
-                    style={{
-                      textAlign: "center",
-                      display: "inline-block",
-                      marginTop: "20px",
-                    }}
-                  >
-                    <button
-                    onClick={()=>{
+                    onClick={() => {
                       window.open(
                         `https://idx-certificate-viewer.vercel.app/${data.doc_uid}/${data.hash}`,
                         "_blank",
                         "noopener,noreferrer"
                       );
                     }}
-                      className="btn btn-primary"
-                    >
-                      View Certificate
-                    </button>
+                    style={{
+                      textAlign: "center",
+                      display: "inline-block",
+                      marginTop: "0px",
+                    }}
+                  >
+                    {/* convert button to qr */}
+
+                    <QRCode
+                      size={100}
+                      value={`https://idx-certificate-viewer.vercel.app/${data.doc_uid}/${data.hash}`}
+                    />
                   </div>
                   <div style={{ float: "right", marginRight: "20px" }}>
                     <div style={{ marginTop: "25px" }} />
