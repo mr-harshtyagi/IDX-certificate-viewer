@@ -180,7 +180,11 @@ export default function Certificate() {
                   >
                     <button
                     onClick={()=>{
-                      window.open(`http://localhost:3001/${data.doc_uid}/${data.hash}`, "_blank", "noopener,noreferrer");
+                      window.open(
+                        `https://idx-certificate-viewer.vercel.app/${data.doc_uid}/${data.hash}`,
+                        "_blank",
+                        "noopener,noreferrer"
+                      );
                     }}
                       className="btn btn-primary"
                     >

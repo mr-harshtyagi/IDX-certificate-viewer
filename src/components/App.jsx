@@ -8,7 +8,11 @@ export default function App() {
       <br />
       <br />
       <br />
-      <h1>Scan any certificate QR to view certificate on Blockchain</h1>
+      <div className="text-center">
+        <h1>This is IDX's Certificate viewer Web Application.</h1>
+        <h1>It can be used to view certificates by scanning QR codes</h1>
+        <h1>You can also view blockchain transaction by clicking on hash</h1>
+      </div>
     </>
   );
 }
