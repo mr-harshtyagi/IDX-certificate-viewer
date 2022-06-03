@@ -50,7 +50,7 @@ export default function Certificate() {
               color: "grey",
             }}
           >
-            Document Hash : {show.hash}
+            Document Hash : {"hash"}
           </a>
           <div
             style={{
@@ -67,7 +67,7 @@ export default function Certificate() {
             />
             <h1 style={{ paddingTop: "10px" }}>BITS PILANI GOA</h1>
             <div style={{ float: "right", marginRight: "30px" }}>
-              <p>Certificate ID: {cert_id}</p>
+              <p>Certificate ID: {"certificate id"}</p>
             </div>
             <h6> Pilani | Goa | Hyderabad | Dubai</h6>
           </div>
@@ -82,7 +82,7 @@ export default function Certificate() {
               This certifies that
             </h1>
             <div style={{ color: "#446A46" }}>
-              <h2>~ {name} ~</h2>
+              <h2>~ {"Harsh Tyagi"} ~</h2>
             </div>
             <h1
               style={{
@@ -93,7 +93,7 @@ export default function Certificate() {
             >
               has successfully completed IT bootcamp's
             </h1>
-            <h3>" {course} "</h3>
+            <h3>" {"Course name"} "</h3>
             <h1
               style={{
                 fontFamily: "Tiro Bangla",
@@ -109,12 +109,12 @@ export default function Certificate() {
               style={{ float: "left", marginLeft: "20px", marginTop: "20px" }}
             >
               <h6>Issued on: </h6>
-              <h5>{timeStamp}</h5>
+              <h5>{"Time Stamp"}</h5>
             </div>
             <div style={{ float: "right", marginRight: "20px" }}>
               <div style={{ marginTop: "45px" }} />
               
-              <h6>{professor}</h6>
+              <h6>{" Prof. Name"}</h6>
               <h6 style={{ fontSize: "0.7rem" }}>CSE Department, Goa Campus</h6>
             </div>
           </div>
