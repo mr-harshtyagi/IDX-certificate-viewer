@@ -1,6 +1,7 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export default function Certificate() {
+  const [data,setData] = useState({});
   useEffect(()=>{
     console.log("axios get data");
 
@@ -28,7 +29,7 @@ export default function Certificate() {
           }}
         >
           <img
-            style={{ width: "300px", marginTop: "80px" }}
+            style={{ width: "300px", marginTop: "80px",marginLeft:"55px" }}
             src="images/logo.png"
             alt="logo"
           />
