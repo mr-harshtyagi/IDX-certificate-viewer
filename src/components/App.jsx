@@ -1,16 +1,14 @@
-import Certificate from './Certificate';
-import DownloadPDF from './downloadPDF';
-import NavBar from './navbar';
+import NavBar from "./navbar";
 
-export default function App(){
-    return (
-      <>
-      <NavBar/>
-        <div style={{ padding: "0 18%",marginTop: "90px" }}>
-          <Certificate />
-        </div>
-        <DownloadPDF/>
-      </>
-    );
+export default function App() {
+  return (
+    <>
+      <NavBar />
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1>Scan any certificate QR to view certificate on Blockchain</h1>
+    </>
+  );
 }
-
