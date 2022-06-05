@@ -19,9 +19,10 @@ export default function Sample() {
       <div className="Example__container">
         <div className="Example__container__document">
           <Document
-            file={file}
-            onLoadSuccess={onDocumentLoadSuccess} >
-              <Page pageNumber={1} />
+            file="sample.pdf"
+            onLoadSuccess={onDocumentLoadSuccess}
+          >
+            <Page pageNumber={1} />
           </Document>
         </div>
       </div>
