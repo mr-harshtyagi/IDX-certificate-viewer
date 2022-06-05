@@ -21,6 +21,10 @@ export default function Certificate() {
       });
   },[])
 
+  function generatePDF(){
+
+  }
+
   return (
     <>
       {loading ? (
@@ -35,7 +39,9 @@ export default function Certificate() {
             <h2 style={{ color: "#446A46" }} className="text-center">
               Your Certificate is here 🎉
             </h2>
-            <div
+
+            <div 
+              id="divtoprint"
               style={{
                 marginTop: "35px",
                 marginLeft: "20px",
@@ -60,7 +66,7 @@ export default function Certificate() {
                   style={{
                     width: "300px",
                     marginTop: "80px",
-                    marginLeft: "55px",
+                    marginLeft: "25px",
                   }}
                   src="../images/logo.png"
                   alt="logo"
@@ -193,6 +199,7 @@ export default function Certificate() {
                       textAlign: "center",
                       display: "inline-block",
                       marginTop: "0px",
+                      marginLeft:"20px"
                     }}
                   >
                     {/* convert button to qr */}
@@ -213,9 +220,12 @@ export default function Certificate() {
                 </div>
               </div>
             </div>
+
+
+
           </div>
           <div className="text-center m-3">
-            <button className="btn btn-lg btn-danger">
+            <button onClick={generatePDF} className="btn btn-lg btn-danger">
               <strong>Download PDF</strong>{" "}
             </button>
           </div>
