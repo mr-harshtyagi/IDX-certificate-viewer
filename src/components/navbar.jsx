@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <div>
       <Navbar bg="light" variant="dark" fixed="top">
-        <div style={{ padding: "0 30px" }}>
+        <div style={{ padding: "0 3%" }}>
           <BsFillCircleFill style={{ fontSize: "3rem" }} />
         </div>
         <h2 style={{ display: "inline" }}>
