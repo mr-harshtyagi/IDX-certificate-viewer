@@ -8,7 +8,7 @@ export default function App() {
       <NavBar />
       <Container>
         <Row>
-          <Col>
+          <Col lg="12" sm="12">
             <Sample />
           </Col>
         </Row>

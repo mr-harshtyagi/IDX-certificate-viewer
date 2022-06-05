@@ -18,13 +18,14 @@ export default function Sample() {
       <br />
       <div className="Example__container">
         <div className="Example__container__document">
-          <Document
-            file="sample.pdf"
-            onLoadSuccess={onDocumentLoadSuccess}
-          >
+          <h2 style={{ color: "#446A46" }} className="text-center">
+            Your Certificate is here 🎉
+          </h2>
+          <Document file="sample.pdf" onLoadSuccess={onDocumentLoadSuccess}>
             <Page pageNumber={1} />
           </Document>
         </div>
+        <button className="btn btn-danger m-4">Download PDF</button>
       </div>
     </div>
   );
