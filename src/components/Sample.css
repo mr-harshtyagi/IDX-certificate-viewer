@@ -22,13 +22,13 @@
     .Example__container__document .react-pdf__Page canvas {
             max-width: 100vw;
             height: auto !important;
-            margin: 0;
+
         }
    
 .Example__container__document .react-pdf__Page {
             max-width: 100%;
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-            margin-left: 0px;
+            margin-left: 10px;
         }
    
 }
