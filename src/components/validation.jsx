@@ -36,9 +36,7 @@ const Validation = () => {
             <Row>
               <Col lg="3" sm="1"></Col>
               <Col lg="6" sm="10">
-                <ClipLoader 
-                  size={50}
-                />
+                <ClipLoader size={50} />
                 <br />
                 <br />
                 <h1> Verifying Certificate ...</h1>
@@ -228,12 +226,14 @@ const Validation = () => {
                 >
                   <BsCheckCircleFill
                     style={{
+                      float:"left",
                       fontSize: "2rem",
                       color: "green",
                     }}
                   />
                   <h3
                     style={{
+                      float:"left",
                       fontWeight: "500",
                       display: "inline-block",
                       marginLeft: "20px",
@@ -242,18 +242,18 @@ const Validation = () => {
                   >
                     Transaction Records :
                   </h3>
+                  <h2
+                    style={{
+                      color: "green",
+                      fontWeight: "600",
+                      display: "inline-block",
+                      marginLeft: "20px",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    <strong>MATCHED</strong>
+                  </h2>
                 </div>
-                <h2
-                  style={{
-                    color: "green",
-                    fontWeight: "600",
-                    display: "inline-block",
-                    marginLeft: "20px",
-                    marginBottom: "20px",
-                  }}
-                >
-                  <strong>MATCHED</strong>
-                </h2>
               </Col>
               <Col lg="3" sm="1"></Col>
             </Row>
