@@ -201,21 +201,34 @@ const Validation = () => {
                 >
                   <BsCheckCircleFill
                     style={{
+                      float: "left",
                       fontSize: "2rem",
                       color: "green",
                     }}
                   />
                   <h3
                     style={{
+                      float: "left",
                       fontWeight: "500",
                       display: "inline-block",
                       marginLeft: "20px",
                       marginBottom: "20px",
                     }}
                   >
-                    Issued on : <strong>{data.time_stamp}</strong>
+                    Issued on : 
+                  </h3>
+                  <h3
+                    style={{
+                      fontWeight: "500",
+                      display: "inline-block",
+                      
+                      marginBottom: "20px",
+                    }}
+                  >
+                    <strong> {data.time_stamp}</strong>
                   </h3>
                 </div>
+
                 <div
                   style={{
                     float: "left",
@@ -226,14 +239,14 @@ const Validation = () => {
                 >
                   <BsCheckCircleFill
                     style={{
-                      float:"left",
+                      float: "left",
                       fontSize: "2rem",
                       color: "green",
                     }}
                   />
                   <h3
                     style={{
-                      float:"left",
+                      float: "left",
                       fontWeight: "500",
                       display: "inline-block",
                       marginLeft: "20px",
