@@ -73,13 +73,15 @@ export default function Certificate() {
                     zIndex: "-1",
                     opacity: "0.1",
                     textAlign: "center",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   <img
                     style={{
                       width: "300px",
                       marginTop: "80px",
-                      marginLeft: "5px",
                     }}
                     src="../images/logo.png"
                     alt="logo"
@@ -214,6 +216,8 @@ export default function Certificate() {
                         size={100}
                         value={`https://idx-certificate-viewer.vercel.app/validate/${data.doc_uid}/${data.hash}`}
                       />
+                      <p style={{color:"grey",fontSize:"0.7rem"}}>Scan QR to Verify</p>
+                    
                     </div>
                     <div style={{ float: "right", marginRight: "20px" }}>
                       <div style={{ marginTop: "25px" }} />
@@ -234,7 +238,6 @@ export default function Certificate() {
                 onClick={() => {
                   setCreate(false);
                   generatePDF();
-                  
                 }}
                 className="btn btn-lg btn-danger"
               >
