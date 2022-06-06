@@ -1,7 +1,6 @@
 import { Container, Row,Col, Table } from "react-bootstrap"
 import NavBar from "./navbar"
 import { useParams } from "react-router-dom";
-import Loader from "react-spinners/BeatLoader";
 import { ClipLoader } from "react-spinners";
 import { useState,useEffect } from "react";
 import Form from "react-bootstrap/Form";
@@ -20,7 +19,7 @@ const Validation = () => {
          .then(function (response) {
            console.log(response.data);
            setData(response.data);
-          //  setLoading(false);
+           setLoading(false);
          })
          .catch(function (error) {
            console.log(error);
