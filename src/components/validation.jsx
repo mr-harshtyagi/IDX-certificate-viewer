@@ -224,9 +224,9 @@ const Validation = () => {
                       
                     }}
                   >
-                    <h4>
-                      <strong> {data.time_stamp}</strong>
-                    </h4>
+                   
+                      <strong style={{fontSize:"1.2rem"}}> {" " + data.time_stamp}</strong>
+                  
                   </h3>
                 </div>
 
