@@ -215,17 +215,18 @@ const Validation = () => {
                       marginBottom: "20px",
                     }}
                   >
-                    Issued on : 
+                    Issued on :
                   </h3>
                   <h3
                     style={{
                       fontWeight: "500",
                       display: "inline-block",
                       
-                      marginBottom: "20px",
                     }}
                   >
-                    <strong> {data.time_stamp}</strong>
+                    <h4>
+                      <strong> {data.time_stamp}</strong>
+                    </h4>
                   </h3>
                 </div>
 
