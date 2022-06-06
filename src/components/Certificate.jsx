@@ -12,6 +12,7 @@ export default function Certificate() {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
   const [create, setCreate] =useState(true)
+  const [button, setButton] = useState("Download PDF")
   useEffect(()=>{
     axios
       .get(`https://bigchaindb-post-txn.herokuapp.com/viewcertificate/${params.certId}/${params.hash}`)
@@ -31,8 +32,7 @@ export default function Certificate() {
       const img = canvas.toDataURL("image/png");
       const imgProperties = pdf.getImageProperties(img);
       const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
-      
+      const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;    
       pdf.addImage(img, "PNG", 0, 0, pdfWidth, pdfHeight);
       pdf.save("download.pdf");
       setCreate(true)
@@ -219,7 +219,7 @@ export default function Certificate() {
 
                       <QRCode
                         size={100}
-                        value={`https://idx-certificate-viewer.vercel.app/${data.doc_uid}/${data.hash}`}
+                        value={`https://idx-certificate-viewer.vercel.app/validate/${data.doc_uid}/${data.hash}`}
                       />
                     </div>
                     <div style={{ float: "right", marginRight: "20px" }}>
@@ -241,6 +241,7 @@ export default function Certificate() {
                 onClick={() => {
                   setCreate(false);
                   generatePDF();
+                  
                 }}
                 className="btn btn-lg btn-danger"
               >
