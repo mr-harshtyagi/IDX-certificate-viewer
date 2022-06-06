@@ -27,7 +27,7 @@ export default function Certificate() {
   },[])
 
   function generatePDF() { 
-    html2canvas(document.getElementById('divtoprint')).then((canvas) => {
+    html2canvas(document.getElementById('divtoprint'),{scale: 2}).then((canvas) => {
       const pdf = new jsPDF("landscape", "pt", "a4");
       const img = canvas.toDataURL("image/png");
       const imgProperties = pdf.getImageProperties(img);
