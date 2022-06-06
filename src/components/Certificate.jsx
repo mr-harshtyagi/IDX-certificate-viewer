@@ -201,13 +201,6 @@ export default function Certificate() {
                       <h5>{data.time_stamp}</h5>
                     </div>
                     <div
-                      onClick={() => {
-                        window.open(
-                          `https://idx-certificate-viewer.vercel.app/${data.doc_uid}/${data.hash}`,
-                          "_blank",
-                          "noopener,noreferrer"
-                        );
-                      }}
                       style={{
                         textAlign: "center",
                         display: "inline-block",
