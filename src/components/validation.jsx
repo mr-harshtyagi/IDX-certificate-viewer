@@ -20,7 +20,7 @@ const Validation = () => {
          .then(function (response) {
            console.log(response.data);
            setData(response.data);
-           setLoading(false);
+          //  setLoading(false);
          })
          .catch(function (error) {
            console.log(error);
@@ -45,76 +45,76 @@ const Validation = () => {
                   style={{
                     float: "left",
                     display: "inline-block",
-                    paddingLeft: "20px",
+                    paddingLeft: "10px",
                   }}
                 >
                   <ClipLoader />
-                  <h2
+                  <h3
                     style={{
                       fontWeight: "300",
                       display: "inline-block",
-                      marginLeft: "20px",
+                      marginLeft: "15px",
                     }}
                   >
                     Verifying Credential Data
-                  </h2>
+                  </h3>
                 </div>
                 <div
                   style={{
                     float: "left",
                     display: "inline-block",
                     marginTop: "10px",
-                    paddingLeft: "20px",
+                    paddingLeft: "10px",
                   }}
                 >
                   <ClipLoader />
-                  <h2
+                  <h3
                     style={{
                       fontWeight: "300",
                       display: "inline-block",
-                      marginLeft: "20px",
+                      marginLeft: "15px",
                     }}
                   >
                     Checking Issuer
-                  </h2>
+                  </h3>
                 </div>
                 <div
                   style={{
                     float: "left",
                     display: "inline-block",
                     marginTop: "10px",
-                    paddingLeft: "20px",
+                    paddingLeft: "10px",
                   }}
                 >
                   <ClipLoader />
-                  <h2
+                  <h3
                     style={{
                       fontWeight: "300",
                       display: "inline-block",
-                      marginLeft: "20px",
+                      marginLeft: "15px",
                     }}
                   >
                     Checking Validity
-                  </h2>
+                  </h3>
                 </div>
                 <div
                   style={{
                     float: "left",
                     display: "inline-block",
                     marginTop: "10px",
-                    paddingLeft: "20px",
+                    paddingLeft: "10px",
                   }}
                 >
                   <ClipLoader />
-                  <h2
+                  <h3
                     style={{
                       fontWeight: "300",
                       display: "inline-block",
-                      marginLeft: "20px",
+                      marginLeft: "15px",
                     }}
                   >
                     Verifying Transaction Data
-                  </h2>
+                  </h3>
                 </div>
               </Col>
               <Col lg="3" sm="1"></Col>
